@@ -1,0 +1,28 @@
+# graphql.servlet.mapping=/graphql
+# graphql.tools.schema-location-pattern=**/*.graphqls
+# graphql.servlet.cors-enabled=true
+# graphql.servlet.max-query-depth=100
+# graphql.servlet.exception-handlers-enabled=true
+
+spring:
+  h2:
+    console:
+      enabled: true
+
+  graphql:
+    graphiql:
+      enabled: true # localhost:8080/graphiql 통해 쿼리 테스트가 가능하다..?
+      printer: 
+        enabled: true # graphql 쿼리를 출력한다
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: "jdbc:h2: ./test"
+    username: sa
+    password:
+    
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    
